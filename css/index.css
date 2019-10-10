@@ -137,6 +137,9 @@ table {
   font-display: swap;
   src: local('Playfair Display Regular'), local('PlayfairDisplay-Regular'), url(https://fonts.gstatic.com/s/playfairdisplay/v15/nuFiD-vYSZviVYUb_rj3ij__anPXDTzYhQ.ttf) format('truetype');
 }
+.displayFlex {
+  display: flex;
+}
 html,
 body {
   height: 100%;
@@ -216,6 +219,13 @@ body {
   font-family: 'Playfair Display', serif;
   font-size: 2.1rem;
   margin-left: 25%;
+}
+@media (max-width: 500px) {
+  .container .aboutContainer {
+    display: flex;
+    flex-flow: row wrap;
+    margin-bottom: 2%;
+  }
 }
 .container .secondContainer {
   display: flex;
