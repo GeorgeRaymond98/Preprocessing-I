@@ -2,6 +2,7 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display&display=swap');
 html,
 body,
 div,
@@ -130,13 +131,6 @@ table {
 * {
   box-sizing: border-box;
 }
-@font-face {
-  font-family: 'Playfair Display';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: local('Playfair Display Regular'), local('PlayfairDisplay-Regular'), url(https://fonts.gstatic.com/s/playfairdisplay/v15/nuFiD-vYSZviVYUb_rj3ij__anPXDTzYhQ.ttf) format('truetype');
-}
 html,
 body {
   height: 100%;
@@ -224,7 +218,7 @@ body {
 }
 .container .secondContainer h2 {
   text-align: center;
-  font-size: 2rem;
+  font-size: 2.0rem;
   margin-bottom: 5%;
 }
 .container .secondContainer .listenUp {
@@ -274,7 +268,7 @@ body {
 }
 .container .copy .col-1-of-1 {
   justify-content: center;
-  width: calc(100% - 2rem);
+  width: calc(98%);
 }
 .container .copy .col {
   display: flex;
