@@ -55,12 +55,16 @@ table {
 @import url('https://fonts.googleapis.com/css?family=Playfair+Display&display=swap');
 @fontStyle: 'Playfair Display', serif;
 @backgroundSilver: Silver;
-
+@middleColor: Coral;
+.displayFlex {
+	display: flex;
+}
 html, body {
 	height: 100%;
 	font-size: 62.5%; 
 }
 .container {
+
 	@media(max-width:500px) {
 		width: 100%;
 		margin: 0 auto;
@@ -69,7 +73,7 @@ html, body {
 		width:100%;
 
 		@media(max-width: 500px) {
-			display: flex;
+			.displayFlex();
 			flex-direction: column;
 			align-items: center;
 			width: 100%;
@@ -77,11 +81,11 @@ html, body {
 		nav {
 		width:100%;
 		margin-top:1%;
-		display: flex;
+		.displayFlex();
 		justify-content: space-evenly;
 
 		@media(max-width: 500px) {
-			display: flex;
+			.displayFlex();
 			flex-direction: column;
 			align-items: center;
 			align-content: space-between;
@@ -94,24 +98,22 @@ html, body {
 			margin-bottom: 2%;
 			color: dimgray;
 
+			&:hover {
+				color: darken(dimgray, 30%);
+			}
 			@media(max-width: 500px){
-				/* display: flex; */
 			margin: 10px;
 			padding: 10px;
 			border-bottom: 1px solid gray;
 			width: 100%;
-			/* justify-content: center; */
 			font-size: 1.2rem;
 				}
 			} //a tag
 		}// nav 
 	}//header
 	.aboutContainer {
-		// margin: 3%;
 		width: 100%;
 		margin-bottom: 2%;
-		// display: flex;
-		// flex-direction: column;
 		background-color: @backgroundSilver;
 		img {
 			margin-left:25%;
@@ -119,30 +121,42 @@ html, body {
 			width: 20%;
 		}//image
 		h1 {
-			font-size: 2.7rem;
+			font-size: 3.0rem;
 			margin-left:25%;
-			margin-bottom: 1%;
 			font-family: @fontStyle;
+			
+			@media(max-width: 500px) {
+				font-size: 2rem;
+			}
 		}// h1
-		h3 {
-			font-size: 2.5rem;
-			margin-left:25%;
-			font-family: @fontStyle;
-		}//h3
+
 		p {
 			font-family: @fontStyle;
 			font-size: 2.1rem;
 			margin-left:25%;
 		}//p
+		@media(max-width: 500px) {
+			.displayFlex();
+			flex-flow:row wrap;
+			margin-bottom:2%;
+		}
 	}//aboutContainer
 	.secondContainer {
-			display:flex;
+		background-color:@middleColor;
+			@media(max-width: 500px ) {
+				display:flex;
+  				flex-flow:row wrap;
+  				justify-content:space-around;
+			}
+		    .displayFlex();
         	flex-flow:row wrap;
-		 	justify-content:space-evenly;
+			 justify-content:space-evenly;
+	
 		h2 {
 			text-align: center;
 			font-size: 2.0rem;
 			margin-bottom: 5%;
+
 		} // h2 
 		.listenUp {
 			border:2px solid black;
@@ -151,6 +165,13 @@ html, body {
 			font-size: 1.5rem;
 			flex-basis:35%;
 			margin-bottom:2%;
+			margin-top: 2%;
+
+			@media(max-width: 500px){
+				flex-basis:75%;
+				margin-top: none;
+				
+				}
 			} // listen up
 		.placeHolder {
 			border:2px solid black;
@@ -159,13 +180,38 @@ html, body {
 			font-size: 1.5rem;
 			flex-basis:35%;
 			margin-bottom:2%;
-		}// place holder 
+			margin-top:2%;
+			span {
+				// text-align: center;
+				font-size: 1.5rem;
+				// margin-bottom: 5%;
+			}
+			@media(max-width: 500px){
+				flex-basis:75%;
+				}
+			}// place holder 
 		.workHistory {
 			border:2px solid black;
 			padding:2%;
 			font-family: @fontStyle;
 			font-size: 1.5rem;
 			flex-basis:35%;
+			margin-bottom:2%;
+
+			@media(max-width: 500px){
+				flex-basis:75%;
+				margin-bottom: 2%;
+				}
+				ul li {
+					list-style-type: disc;
+					padding: 2%;
+					@media(max-width: 500px) {
+					list-style-type: none;
+					}
+				}
+				li {
+					padding-top: 2%;
+				}
 			
 		} //work history
 		.jobHistory {
@@ -174,18 +220,37 @@ html, body {
 			font-size: 1.5rem;
 			font-family: @fontStyle;
 			flex-basis:35%;
+			margin-bottom:2%;
+			
+			ul li {
+				list-style-type: disc;
+				padding: 2%;
+
+				@media(max-width: 500px) {
+					list-style-type: none;
+				}
+			}
+			li {
+				
+				padding-top: 2%;
+			}
+
+			@media(max-width: 500px){
+				flex-basis:75%;
+				margin-bottom: 2%;
+				}
 		}// job history
 	}// second container 
 	.copy {
 		margin-top: 2%;
-		display: flex;
+		.displayFlex();
 		justify-content: center;
 		background-color: lightblue;
 		font-size: 1.8rem;
 		font-weight: 80%;
 
 		.row {
-			display: flex;
+			.displayFlex();
 			flex-direction: row;
 			max-width: 80rem;
 			margin:auto;
@@ -196,7 +261,7 @@ html, body {
 			width:calc(100% - 2rem);
 		}
 		.col {
-			display: flex;
+			.displayFlex();
 			margin:1rem;
 		}
 	}

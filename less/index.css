@@ -131,6 +131,9 @@ table {
 * {
   box-sizing: border-box;
 }
+.displayFlex {
+  display: flex;
+}
 html,
 body {
   height: 100%;
@@ -174,14 +177,15 @@ body {
   margin-bottom: 2%;
   color: dimgray;
 }
+.container header nav a:hover {
+  color: #1c1c1c;
+}
 @media (max-width: 500px) {
   .container header nav a {
-    /* display: flex; */
     margin: 10px;
     padding: 10px;
     border-bottom: 1px solid gray;
     width: 100%;
-    /* justify-content: center; */
     font-size: 1.2rem;
   }
 }
@@ -196,25 +200,39 @@ body {
   width: 20%;
 }
 .container .aboutContainer h1 {
-  font-size: 2.7rem;
+  font-size: 3.0rem;
   margin-left: 25%;
-  margin-bottom: 1%;
   font-family: 'Playfair Display', serif;
 }
-.container .aboutContainer h3 {
-  font-size: 2.5rem;
-  margin-left: 25%;
-  font-family: 'Playfair Display', serif;
+@media (max-width: 500px) {
+  .container .aboutContainer h1 {
+    font-size: 2rem;
+  }
 }
 .container .aboutContainer p {
   font-family: 'Playfair Display', serif;
   font-size: 2.1rem;
   margin-left: 25%;
 }
+@media (max-width: 500px) {
+  .container .aboutContainer {
+    display: flex;
+    flex-flow: row wrap;
+    margin-bottom: 2%;
+  }
+}
 .container .secondContainer {
+  background-color: Coral;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-evenly;
+}
+@media (max-width: 500px) {
+  .container .secondContainer {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+  }
 }
 .container .secondContainer h2 {
   text-align: center;
@@ -228,6 +246,13 @@ body {
   font-size: 1.5rem;
   flex-basis: 35%;
   margin-bottom: 2%;
+  margin-top: 2%;
+}
+@media (max-width: 500px) {
+  .container .secondContainer .listenUp {
+    flex-basis: 75%;
+    margin-top: none;
+  }
 }
 .container .secondContainer .placeHolder {
   border: 2px solid black;
@@ -236,6 +261,15 @@ body {
   font-size: 1.5rem;
   flex-basis: 35%;
   margin-bottom: 2%;
+  margin-top: 2%;
+}
+.container .secondContainer .placeHolder span {
+  font-size: 1.5rem;
+}
+@media (max-width: 500px) {
+  .container .secondContainer .placeHolder {
+    flex-basis: 75%;
+  }
 }
 .container .secondContainer .workHistory {
   border: 2px solid black;
@@ -243,6 +277,25 @@ body {
   font-family: 'Playfair Display', serif;
   font-size: 1.5rem;
   flex-basis: 35%;
+  margin-bottom: 2%;
+}
+@media (max-width: 500px) {
+  .container .secondContainer .workHistory {
+    flex-basis: 75%;
+    margin-bottom: 2%;
+  }
+}
+.container .secondContainer .workHistory ul li {
+  list-style-type: disc;
+  padding: 2%;
+}
+@media (max-width: 500px) {
+  .container .secondContainer .workHistory ul li {
+    list-style-type: none;
+  }
+}
+.container .secondContainer .workHistory li {
+  padding-top: 2%;
 }
 .container .secondContainer .jobHistory {
   border: 2px solid black;
@@ -250,6 +303,25 @@ body {
   font-size: 1.5rem;
   font-family: 'Playfair Display', serif;
   flex-basis: 35%;
+  margin-bottom: 2%;
+}
+.container .secondContainer .jobHistory ul li {
+  list-style-type: disc;
+  padding: 2%;
+}
+@media (max-width: 500px) {
+  .container .secondContainer .jobHistory ul li {
+    list-style-type: none;
+  }
+}
+.container .secondContainer .jobHistory li {
+  padding-top: 2%;
+}
+@media (max-width: 500px) {
+  .container .secondContainer .jobHistory {
+    flex-basis: 75%;
+    margin-bottom: 2%;
+  }
 }
 .container .copy {
   margin-top: 2%;
